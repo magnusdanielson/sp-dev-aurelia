@@ -11,7 +11,9 @@ import environment from './environment';
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
-    .standardConfiguration()
+    //.standardConfiguration()
+    .defaultBindingLanguage()
+    .defaultResources()
     .feature('resources');
 
   if (environment.debug) {
@@ -22,5 +24,5 @@ export function configure(aurelia: Aurelia) {
     aurelia.use.plugin('aurelia-testing');
   }
 
-  aurelia.start().then(() => aurelia.setRoot());
+  aurelia.start().then(() => aurelia.setRoot('app', document.body));
 }
