@@ -1,0 +1,23 @@
+﻿<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.ScriptEditorWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>Det går inte att importera den här webbdelen.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Content" type="string">
+          &lt;div id=&quot;aurelia-app&quot;  aurelia-app=&quot;main&quot;&gt;
+          &lt;div class=&quot;splash&quot;&gt;
+          &lt;div class=&quot;message&quot;&gt;Aurelia binding routing Demo&lt;/div&gt;
+          &lt;i class=&quot;fa fa-spinner fa-spin&quot;&gt;&lt;/i&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+        </property>
+        <property name="Title" type="string">Aurelia</property>
+        <property name="ChromeType" type="chrometype">None</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

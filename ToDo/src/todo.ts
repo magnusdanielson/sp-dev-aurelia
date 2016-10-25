@@ -6,5 +6,6 @@ export class Todo
     {
         this.description = description;
         this.done = false;
+         
     }
 }

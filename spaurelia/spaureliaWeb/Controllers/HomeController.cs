@@ -9,14 +9,15 @@ namespace spaureliaWeb.Controllers
 {
     public class HomeController : Controller
     {
-        [SharePointContextFilter]
+        [AccessTokenFilter]
         public ActionResult Index()
         {
             User spUser = null;
 
-            var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
+            var accessTokenInfo = WebAPIHelper.GetAccessTokenInfo(Request);
 
-            using (var clientContext = spContext.CreateUserClientContextForSPHost())
+
+            using (var clientContext = accessTokenInfo.CreateUserClientContextForSPHost())
             {
                 if (clientContext != null)
                 {
@@ -29,7 +30,8 @@ namespace spaureliaWeb.Controllers
                     ViewBag.UserName = spUser.Title;
                 }
             }
-
+            HttpCookie cookie = new HttpCookie("CacheKey", accessTokenInfo.CacheKey);
+            Response.SetCookie(cookie);
             return View();
         }
 
