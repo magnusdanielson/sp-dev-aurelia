@@ -5,7 +5,7 @@ define('app',["require", "exports"], function (require, exports) {
         }
         App.prototype.configureRouter = function (config, router) {
             this.router = router;
-            config.title = 'Aurelia';
+            config.title = 'Aurelia!!';
             config.map([
                 { route: ['', 'todos'], name: 'todos', moduleId: './todos', nav: true, title: 'Todos' },
                 { route: 'binding', name: 'binding', moduleId: './binding-demo', nav: true, title: 'Binding' },
