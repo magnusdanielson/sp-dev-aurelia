@@ -4,6 +4,8 @@ import processMarkup from './process-markup';
 import processCSS from './process-css';
 import {build} from 'aurelia-cli';
 import * as project from '../aurelia.json';
+import faCss from './fa-css'; // Our custom task
+import faFonts from './fa-fonts'; // Our custom task
 
 export default gulp.series(
   readProjectConfiguration,
@@ -11,6 +13,8 @@ export default gulp.series(
     transpile,
     processMarkup,
     processCSS
+    ,faFonts // Our custom task
+   // ,faCss
   ),
   writeBundles
 );

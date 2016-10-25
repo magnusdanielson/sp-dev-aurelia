@@ -1,0 +1,53 @@
+<template>
+  <require from="./binding-demo"></require>
+<div class="container">
+    <div class="header clearfix">
+      <!-- nav -->
+      <h3>${heading}</h3>
+    </div>
+    <div class="jumbotron">
+        <h1>Aurelia i SharePoint</h1>
+        <p class="lead">@magnusdanielson</p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control"  value.bind="todoDescription">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" click.trigger="addTodo()">Add Todo</button>
+                </span>
+            </div>
+
+            <div class="input-group" repeat.for="todo of todos">
+                <span class="input-group-addon" >
+                  <input type="checkbox" checked.bind="todo.done" >
+                </span>
+                <input type="text" class="form-control" css="text-decoration: ${todo.done ? 'line-through' : 'none'}" value.bind="todo.description">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" click.trigger="removeTodo(todo)">Remove</button>
+                </span>
+            </div>
+ 
+      
+        </div>
+
+        <div class="col-lg-6">
+            <binding-demo></binding-demo>
+        </div>
+      </div>
+      <div class="row">
+
+          
+      </div>
+      <footer class="footer">
+        <p>&copy; 2016 Dunite AB</p>
+      </footer>
+
+    </div> 
+  
+
+
+
+
+</template>

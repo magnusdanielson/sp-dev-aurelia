@@ -1,0 +1,33 @@
+<template>
+    <div class='form-group'>
+        <label for='firstName'>firstName</label>
+        <input type='text' value.bind='firstName' class='form-control' id="firstName">
+    </div>
+
+    <div class='form-group'>
+        <label for='lastName'>lastName two-way</label>
+        <input type='text' value.bind='lastName' class='form-control' id="lastName">
+    </div>
+
+    <div class='form-group'>
+        <label for='firstNameOneWay'>firstName one-way</label>
+        <input type='text' value.one-way='firstName' class='form-control' id="firstNameOneWay">
+    </div>
+
+    <div class='form-group'>
+        <label for='lastName1time'>lastName 1time</label>
+        <input type='text' value.one-time='lastName' class='form-control' id="lastName1time">
+    </div>
+    
+    <div textcontent.bind="firstName"></div>
+    <div textcontent.bind="firstName + lastName" >aaa</div>
+
+    <div>${firstName + lastName}</div>
+
+    <div class='form-group'>
+        <label for='style'>Style</label>
+        <input type='text' value.bind="color" class='form-control' id="style" css="background: ${color};">
+    </div>
+    <button type="button" class="btn btn-default" click.delegate="select('yes')">Yes</button>
+    <div textcontent.bind="cssClass"></div>
+</template>
