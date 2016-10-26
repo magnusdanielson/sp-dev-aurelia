@@ -7,21 +7,17 @@ export class App {
   todos: Array<Todo>;
   todoDescription: string;
   message = 'Hello World!';
-  userName: string;
+  userName: string = "inget än.";
   
   constructor()
   {
     this.heading = 'Todos';
     this.todos = [];
     this.todoDescription = '';
-    if(typeof userName != 'undefined')
-      {
-          this.userName = userName;
-      }
-      else
-      {
-          this.userName = "inte än."
-      }
+    // if(typeof userName != 'undefined')
+    //   {
+    //       this.userName = userName;
+    //   }
   }
 
   addTodo()

@@ -50,6 +50,8 @@ namespace spaureliaWeb
 
         // Lägg till i vendor-bundle.js
         // requirejs.config({ "baseUrl": "https://localhost:44336/src/"
+        // Ändra vendor-bundle.js
+        // aurelia.start().then(function () { return aurelia.setRoot('binding-demo'); });
 
         // PUT api/<controller>/5
         public void Put(int id, [FromBody]string value)
