@@ -207,7 +207,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharePointContext.cs" />
-    <Compile Include="SPController.cs" />
+    <Compile Include="Controllers\SPController.cs" />
     <Compile Include="TokenHelper.cs" />
   </ItemGroup>
   <ItemGroup>

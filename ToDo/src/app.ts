@@ -1,9 +1,9 @@
 import {RouterConfiguration, Router} from 'aurelia-router';
 
 export class App {
-    router: Router;
+    currentRouter: Router;
   configureRouter(config: RouterConfiguration, router: Router): void {
-    this.router = router;
+    this.currentRouter = router;
     config.title = 'Aurelia';
     config.map([
       { route: ['', 'todos'], name: 'todos',      moduleId: './todos',      nav: true, title: 'Todos' },
